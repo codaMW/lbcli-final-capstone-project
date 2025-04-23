@@ -2,6 +2,6 @@
 
 block_hash=$(bitcoin-cli -signet getblockhash 243825)
 
-outputs=$(bitcoin-cli -signet getblock | jq '.nTx')
+outputs=$(bitcoin-cli -signet getblock $block_hash | jq '.nTx')
 
 echo "$outputs"

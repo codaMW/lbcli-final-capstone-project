@@ -15,3 +15,5 @@ output_value=$(bitcoin-cli -signet decoderawtransaction $raw_tx | jq '[.vout[].v
 fees=$((input_value - output_value))
 
 echo "$fees"
+
+
